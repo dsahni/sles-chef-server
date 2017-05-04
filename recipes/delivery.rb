@@ -18,6 +18,7 @@ chef_automate node['chef_automate']['fqdn'] do
   notifies :run, 'ruby_block[add automate password to databag]', :immediately
   platform 'el'
   platform_version '6'
+  notifies :run, 'ruby_block[add automate password to databag]', :immediately
 end
 
 ruby_block 'add automate password to databag' do

@@ -35,5 +35,5 @@ ruby_block 'add automate password to databag' do
 
     @chef_rest.put('data/automate/automate', delivery_databag)
   end
-  action :nothing
+  action :run
 end
